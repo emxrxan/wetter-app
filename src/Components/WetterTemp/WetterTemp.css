@@ -1,0 +1,24 @@
+.wetterTemp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top: 1px double black;
+    border-bottom: 1px double black;
+}
+
+.wetterTemp > span{
+    width: 200px;
+    height: 80px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+    background-color: #f8f9fa;
+}
+
+@media (max-width:672px) {
+    .wetterTemp{
+        padding-bottom: 1.5rem;
+    }
+}

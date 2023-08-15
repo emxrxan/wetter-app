@@ -1,0 +1,33 @@
+.flex-landcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: flex-start;
+    border-bottom: 5px solid black;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    max-height: 13rem;
+    background-color:cadetblue;
+    overflow-y: scroll;
+    padding: 0.5rem;
+}
+
+.flex-landcontainer::-webkit-scrollbar{
+    width: 0.5rem;
+}
+
+.flex-landcontainer::-webkit-scrollbar-thumb{
+    background-color: aquamarine;
+    border-radius: 1rem;
+}
+
+.flex-landcontainer::-webkit-scrollbar-track{
+    background-color:cadetblue;
+
+}
+
+@media (max-width:744px) {
+    .flex-landcontainer{
+        justify-content: space-around;
+    }
+}
