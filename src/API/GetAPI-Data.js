@@ -9,8 +9,13 @@ async function getCountryData(countryName){
 }
 
 async function getWeatherData(lat, lon){
+    const option = {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({lat:lat, lon:lon})
+    }
     try{
-        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.REACT_APP_API_KEY}`);
+        const response = await fetch('http://localhost:8000/weather',option);
         const result = await response.json();
         return result;
     }catch(error){
